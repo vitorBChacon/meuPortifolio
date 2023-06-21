@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Top from '../Components/Top'
+import About from '../Components/About';
 
 class Main extends Component {
   constructor() {
@@ -8,7 +9,10 @@ class Main extends Component {
 
   render() {
     return (
-      <Top />
+      <div>
+        <Top />
+        <About />
+      </div>
     )
   }
 
