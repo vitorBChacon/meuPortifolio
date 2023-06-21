@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Top from '../Components/Top'
 import About from '../Components/About';
-
+import Bottom from '../Components/Bottom';
 class Main extends Component {
   constructor() {
     super();
@@ -12,6 +12,7 @@ class Main extends Component {
       <div>
         <Top />
         <About />
+        <Bottom />
       </div>
     )
   }
