@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Top from '../Components/Top'
 
 class Main extends Component {
   constructor() {
@@ -8,10 +8,7 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Portfólio</h1>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
+      <Top />
     )
   }
 
