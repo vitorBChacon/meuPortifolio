@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Top from '../Components/Top'
 import About from '../Components/About';
-import Bottom from '../Components/Bottom';
 class Main extends Component {
   constructor() {
     super();
@@ -9,11 +8,10 @@ class Main extends Component {
 
   render() {
     return (
-      <div>
+      <main className='dark'>
         <Top />
         <About />
-        <Bottom />
-      </div>
+      </main>
     )
   }
 

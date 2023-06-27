@@ -1,11 +1,16 @@
 import React, { Component } from "react";
+import "../css/About.css"
 
 class About extends Component {
   render() {
     return (
-      <div>
-        <p>Lorem ipsum dolor sit amet.</p>
-      </div>
+      <section>
+        <p className="about-paragraph">
+          lorem Ipsum <br/>
+          lorem Ipsum <br/>
+          lorem Ipsum
+        </p>
+      </section>
     )
   }
 }
