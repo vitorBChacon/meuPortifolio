@@ -3,12 +3,16 @@ import { render } from '@testing-library/react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import { Provider } from 'react-redux';
-import {  legacy_createStore as createStore, applyMiddleware } from 'redux';
+import {  configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import reducer from '../../redux/reducers';
 
 export const renderWithRouterAndRedux = (component, initialState, route = '/') => {
-  const store = createStore(reducer, initialState, applyMiddleware(thunk));
+  const store = configureStore({
+    reducer,
+    preloadedState: initialState,
+    middleware: [thunk]
+  });
   const history = createMemoryHistory({ initialEntries: [route] });
 
   return {
