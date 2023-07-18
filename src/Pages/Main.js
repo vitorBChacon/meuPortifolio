@@ -8,8 +8,9 @@ class Main extends Component {
   }
 
   render() {
+    const { isDarkThemeOn } = this.props;
     return (
-      <main data-testid='main' className={styles.dark}>
+      <main data-testid='main' className={ isDarkThemeOn ? styles.dark : styles.light }>
         <Top />
         <About />
       </main>

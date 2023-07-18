@@ -15,11 +15,13 @@ describe('Testes para a página principal', () => {
     expect(mainElement.className).toMatch('dark');
   });
   it('testa a funcionalidade do botão do modo noturno', async () => {
-    const {history} = renderWithRouterAndRedux(<App />, {}, '/');
+    renderWithRouterAndRedux(<App />, {}, '/');
     
     const mainElement = screen.getByTestId('main');
-    const darkModeButton = screen.getByTestId('dark-mode')
+    const darkModeButton = screen.getByTestId('dark-mode');
 
-    userEvent.click(darkModeButton)
+    userEvent.click(darkModeButton);
+
+    expect(mainElement.className).toMatch('light');
   })
 });
