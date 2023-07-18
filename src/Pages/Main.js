@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Top from '../Components/Top'
 import About from '../Components/About';
+import styles from '../css/Main.module.css';
 class Main extends Component {
   constructor() {
     super();
@@ -8,7 +9,7 @@ class Main extends Component {
 
   render() {
     return (
-      <main className='dark'>
+      <main data-testid='main' className={styles.dark}>
         <Top />
         <About />
       </main>

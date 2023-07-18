@@ -6,6 +6,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import reducer from '../../redux/reducers';
 import { createMemoryHistory } from 'history';
+import ErrorBoundary from '../../utils/ErrorBoundary';
 
 export const renderWithRouterAndRedux = (component, initialState, route = '/') => {
   const store = configureStore({
@@ -19,7 +20,9 @@ export const renderWithRouterAndRedux = (component, initialState, route = '/') =
   return {
     ...render(
       <Provider store={store}>
-        <MemoryRouter history={history}>{component}</MemoryRouter>
+        <ErrorBoundary>
+          <MemoryRouter history={history}>{component}</MemoryRouter>
+        </ErrorBoundary>
       </Provider>
     ),
     history,
