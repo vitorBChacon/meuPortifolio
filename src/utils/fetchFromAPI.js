@@ -1,11 +1,8 @@
-async function fetchFromGitHubApi(username, acessToken) {
+async function fetchFromGitHubApi(username) {
   const url = `https://api.github.com/users/${username}/repos`;
-  const headers = {
-    Authorization: `Bearer ${acessToken}`,
-  };
 
   try {
-    const response = await fetch(url, { headers, });
+    const response = await fetch(url);
     if (!response.ok) throw new Error(`${response.status}: ${response.statusText}`);
     const data = response.json()
     return data;
