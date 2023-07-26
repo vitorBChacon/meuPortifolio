@@ -1,4 +1,4 @@
-import { cleanup, screen } from '@testing-library/react';
+import { cleanup, screen, act } from '@testing-library/react';
 import { renderWithRouterAndRedux } from './helpers/renderWithRouterAndRedux';
 import App from '../App';
 import configureStore from 'redux-mock-store';
@@ -12,5 +12,9 @@ describe('Testes para a página principal', () => {
   it('testa a renderização da página principal', async () => {
     const {history} = await renderWithRouterAndRedux(<App />, {}, '/');
     
+    act(() => {
+      history.push('/projects');
+    })
+
   });
 });

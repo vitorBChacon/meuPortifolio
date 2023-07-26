@@ -25,7 +25,6 @@ describe('Testes para a página principal', () => {
 
     expect(history.location.pathname).toBe('/');
     expect(mainElement).toBeInTheDocument();
-    console.log(mainElement.className)
     expect(mainElement.className).toMatch('dark');
   });
   it('testa a funcionalidade do botão do modo noturno', async () => {
@@ -35,7 +34,6 @@ describe('Testes para a página principal', () => {
     const darkModeButton = await screen.getByTestId('dark-mode');
 
     userEvent.click(darkModeButton);
-    console.log(mainElement.className)
 
     expect(mainElement.className).toMatch('light');
   });
