@@ -12,3 +12,5 @@ const repositories = [
     description: 'blabla'
   },
 ]
+
+export default repositories;

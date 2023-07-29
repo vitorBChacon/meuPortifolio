@@ -1,4 +1,4 @@
-async function fetchFromGitHubApi(username) {
+export default async function fetchFromGitHubApi(username) {
   const url = `https://api.github.com/users/${username}/repos`;
 
   try {
