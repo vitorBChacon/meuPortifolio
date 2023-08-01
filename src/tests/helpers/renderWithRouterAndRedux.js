@@ -8,8 +8,8 @@ import reducer from '../../redux/reducers';
 import { createMemoryHistory } from 'history';
 import ErrorBoundary from '../../utils/ErrorBoundary';
 
-export const renderWithRouterAndRedux = (component, initialState, route = '/', mockStore) => {
-  const store = mockStore || configureStore({
+export const renderWithRouterAndRedux = (component, initialState, route = '/') => {
+  const store = configureStore({
     reducer,
     preloadedState: initialState,
     middleware: [thunk]

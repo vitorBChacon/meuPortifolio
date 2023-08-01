@@ -31,13 +31,15 @@ describe('Testes para a página principal', () => {
   });
 
   it('testa a renderização da página principal', async () => {
-    const {history} = await renderWithRouterAndRedux(<App />, {}, '/', store);
+    const {history} = await renderWithRouterAndRedux(<App />, { store }, '/');
     
     act(() => {
       history.push('/projects');
     })
 
     const listOfRepos = screen.getAllByTestId('repo');
+
+    console.log(listOfRepos);
 
     expect(listOfRepos).toBeInTheDocument();
 

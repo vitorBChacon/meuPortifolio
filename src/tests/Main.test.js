@@ -19,7 +19,7 @@ describe('Testes para a página principal', () => {
   });
   
   it('testa a renderização da página principal', async () => {
-    const { history } = await renderWithRouterAndRedux(<App />, {}, '/', store);
+    const { history } = await renderWithRouterAndRedux(<App />, { store }, '/');
     
     const mainElement = await screen.getByTestId('main');
 
