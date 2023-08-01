@@ -4,13 +4,6 @@ import { connect } from 'react-redux';
 import { setRepositories } from '../redux/slices/repositories';
 
 class ProjectList extends Component {
-  constructor() {
-    super();
-    this.state = {
-      repositories: [],
-    }
-  }
-
   async componentDidMount() {
     try {
       const { setRepositories } = this.props;
@@ -22,16 +15,22 @@ class ProjectList extends Component {
   }
 
   render() {
-    const { repositories } = this.state;
+    const { repositories } = this.props;
     return (
       <section>
-        { repositories.map((repo, index) => (
-          <tr
-            key={index}
-          >
-            <td>{repo.html_url}</td>
-          </tr>
+        <table>
+          <tbody>
+            { repositories.map((repo, index) => (
+            <tr key={index}>
+              <td>
+                <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
+                  {repo.html_url}
+                </a>
+              </td>
+            </tr>
         ))}
+          </tbody>
+        </table>
       </section>
     )
   }
