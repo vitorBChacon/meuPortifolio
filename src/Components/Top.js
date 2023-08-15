@@ -19,7 +19,6 @@ class Top extends Component {
           <br />
           <a>Projetos</a>
           <br />
-          <a>Contatos</a>
         </nav>
       </header>
     )

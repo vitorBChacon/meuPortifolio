@@ -23,6 +23,12 @@ class ProjectList extends Component {
             { repositories.map((repo, index) => (
             <tr key={index}>
               <td>
+                {repo.name}
+              </td>
+              <td>
+                {repo.description}
+              </td>
+              <td>
                 <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
                   {repo.html_url}
                 </a>

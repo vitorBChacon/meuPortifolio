@@ -5,6 +5,7 @@ import { BrowserRouter } from 'react-router-dom';
 import store from './redux/store';
 import App from './App';
 import ErrorBoundary from './utils/ErrorBoundary';
+import './css/index.css'
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
