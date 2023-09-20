@@ -1,19 +1,15 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 import { toggleTheme } from '../redux/slices/theme';
+import { HiSun, HiMoon } from 'react-icons/hi'
 
 class Top extends Component {
   render() {
-    const { toggleTheme } = this.props;
+    const { isDarkThemeOn, toggleTheme } = this.props;
     return (
       <header>
         <h1> Vitor Breno Chacon e Silva</h1>
-        <button
-          data-testid="dark-mode"
-          onClick={toggleTheme}
-        >
-          darkModeButton
-        </button>
+        { isDarkThemeOn ? <HiSun onClick={toggleTheme}/> : <HiMoon onClick={toggleTheme}/> }
         <nav>
           <a>Página Principal</a>
           <br />
