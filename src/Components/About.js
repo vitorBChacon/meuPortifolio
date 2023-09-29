@@ -4,8 +4,8 @@ import styles from "../css/About.module.css"
 class About extends Component {
   render() {
     return (
-      <section>
-        <p className="about-paragraph">
+      <section className={styles.container}>
+        <p className={styles.paragraph}>
           lorem Ipsum <br/>
           lorem Ipsum <br/>
           lorem Ipsum
