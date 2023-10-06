@@ -1,18 +1,23 @@
 import React, { Component } from "react";
+import { connect } from 'react-redux';
 import styles from "../css/About.module.css"
+import localization from "../text.json"
 
 class About extends Component {
   render() {
+    const { selectedLanguage } = this.props;
     return (
       <section className={styles.container}>
         <p className={styles.paragraph}>
-          lorem Ipsum <br/>
-          lorem Ipsum <br/>
-          lorem Ipsum
+          {localization[selectedLanguage].Paragraph}
         </p>
       </section>
     )
   }
 }
 
-export default About;
+const mapStateToProps = (state) => ({
+  selectedLanguage: state.language.selectedLanguage,
+});
+
+export default connect(mapStateToProps)(About);

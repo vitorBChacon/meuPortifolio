@@ -1,0 +1,18 @@
+{
+  "EN": {
+    "Name": "EN",
+    "Projects": "Projects",
+    "Paragraph": "I was born in 1997 in Paraíba, Brasil and Chose to become a developer due to my love for video games and technology",
+    "ProjectName": "Name",
+    "Description": "Description",
+    "Repository": "Repository Link"
+  },
+  "PT": {
+    "Name": "PT",
+    "Projects": "Projetos",
+    "Paragraph": "Nascido em 1997 no Brasil no estado da Paraíba, Escolhi me tornar um desenvolvedor devido ao meu amor por jogos eletrônicos e tecnológia",
+    "ProjectName": "Nome",
+    "Description": "Descrição",
+    "Repository": "Link do Repositório"
+  }
+}
