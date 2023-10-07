@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-import { themeReducer, RepositoriesReducer, languageReducer} from './slices';
+import { themeReducer, RepositoriesReducer, languageReducer, pageTrackerReducer} from './slices';
 import { composeWithDevTools } from '@redux-devtools/extension';
 
 const store = configureStore({
@@ -8,6 +8,7 @@ const store = configureStore({
     theme: themeReducer,
     repositories: RepositoriesReducer,
     language: languageReducer,
+    pageTracker: pageTrackerReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

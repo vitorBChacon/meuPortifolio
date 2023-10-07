@@ -9,7 +9,10 @@ import localization from '../text.json';
 
 class Top extends Component {
   render() {
-    const { isDarkThemeOn, selectedLanguage, languageOptions, toggleTheme, setLanguage } = this.props;
+    const { isDarkThemeOn, selectedLanguage, languageOptions, toggleTheme, setLanguage, currentPage } = this.props;
+    const isRoot = currentPage === 'root'
+    const isProjects = currentPage === 'projects'
+
     return (
       <header className={styles.header}>
         <section className={styles.topSection}>
@@ -22,8 +25,8 @@ class Top extends Component {
         </section>
         <nav className={styles.navContainer}>
           { isDarkThemeOn ? <HiSun className={styles.toggleIcon} onClick={toggleTheme}/> : <HiMoon className={styles.toggleIcon} onClick={toggleTheme}/> }
-          <Link to="/" className={styles.navLink}> <HiHome /> </Link>
-          <Link to="/projects" className={styles.navLink}>{localization[selectedLanguage].Projects}</Link>
+          { !isRoot ? <Link to="/" className={styles.navLink}> <HiHome /> </Link>: <HiHome className={styles.homeIcon} /> }
+          { !isProjects ? <Link to="/projects" className={styles.navLink}>{localization[selectedLanguage].Projects}</Link>: <p className={styles.projects}>{localization[selectedLanguage].Projects}</p>}
         </nav>
       </header>
     )
@@ -34,6 +37,7 @@ const mapStateToProps = (state) => ({
   isDarkThemeOn: state.theme.isDarkThemeOn,
   selectedLanguage: state.language.selectedLanguage,
   languageOptions: state.language.languageOptions,
+  currentPage: state.pageTracker.currentPage
 });
 
 const mapDispatchToProps = {
@@ -42,4 +46,3 @@ const mapDispatchToProps = {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Top);
-

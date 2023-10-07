@@ -3,11 +3,17 @@ import { connect } from 'react-redux';
 import styles from '../css/Main.module.css';
 import Top from '../Components/Top';
 import ProjectList from '../Components/projectList';
+import { setPage } from '../redux/slices/pageTracker';
 
 class Projects extends Component {
   constructor() {
     super();
   }
+
+  componentDidMount() {
+    const { setPage } = this.props;
+    setPage('projects')
+  };
 
   render() {
     const { isDarkThemeOn } = this.props;
@@ -25,6 +31,9 @@ class Projects extends Component {
 
 const mapStateToProps = (state) => ({
   isDarkThemeOn: state.theme.isDarkThemeOn,
+  currentPage: state.pageTracker.currentPage,
 });
 
-export default connect(mapStateToProps)(Projects);
+const mapDispatchToProps = { setPage };
+
+export default connect(mapStateToProps, mapDispatchToProps)(Projects);
