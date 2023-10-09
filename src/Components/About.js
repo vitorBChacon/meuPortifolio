@@ -5,10 +5,10 @@ import localization from "../text.json"
 
 class About extends Component {
   render() {
-    const { selectedLanguage } = this.props;
+    const { selectedLanguage, isDarkThemeOn } = this.props;
     return (
       <section className={styles.container}>
-        <p className={styles.paragraph}>
+        <p className={isDarkThemeOn ? styles.dark : styles.light}>
           {localization[selectedLanguage].Paragraph}
         </p>
       </section>
@@ -17,6 +17,7 @@ class About extends Component {
 }
 
 const mapStateToProps = (state) => ({
+  isDarkThemeOn: state.theme.isDarkThemeOn,
   selectedLanguage: state.language.selectedLanguage,
 });
 

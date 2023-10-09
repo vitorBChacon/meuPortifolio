@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import styles from '../css/Main.module.css';
 import Top from '../Components/Top';
 import ProjectList from '../Components/projectList';
+import Bottom from '../Components/Bottom'
 import { setPage } from '../redux/slices/pageTracker';
 
 class Projects extends Component {
@@ -24,6 +25,7 @@ class Projects extends Component {
       >
         <Top />
         <ProjectList />
+        <Bottom />
       </main>
     )
   }
