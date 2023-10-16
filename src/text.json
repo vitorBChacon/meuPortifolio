@@ -2,14 +2,22 @@
   "EN": {
     "Name": "EN",
     "Projects": "Projects",
-    "Paragraph": "I was born in 1997 in Paraíba, Brasil and Chose to become a developer due to my love for video games and technology",
+    "Paragraph1": "A certain IT company in the world began its activities in a garage, and today it is the most valuable company in the World! Its history, however, would not be the same without its founder, Steve Jobs.",
+    "Paragraph2": "Twelve years after leaving the company he founded, Steve Jobs returned to the company at the beginning of 1997 and in this same year and moment, Vitor Breno Chacon & Silva was born in Brazil, with his unshakable passion for technology and programming.",
+    "Paragraph3": "I am Vitor Breno Chacon & Silva and this is my world!",
+    "Paragraph4": "I started my journey in the digital universe in 2022 when I joined Trybe's web development course, where I learned programming languages ​​and tools aimed both at developing web pages (Node.js, React.js) and developing APIs and databases to be used on these pages.",
+    "Paragraph5": "I hope I can count on you to continue this Journey!",
     "ProjectName": "Project Name",
     "Repository": "Repository Link"
   },
   "PT": {
     "Name": "PT",
     "Projects": "Projetos",
-    "Paragraph": "Nascido em 1997 no Brasil no estado da Paraíba, Escolhi me tornar um desenvolvedor devido ao meu amor por jogos eletrônicos e tecnológia",
+    "Paragraph1": "Uma empresa de tecnologia começou suas atividades em uma garagem, hoje ela é a mais valiosa do mundo! Mas a sua história não seria a mesma sem Steve Jobs. ",
+    "Paragraph2": "Doze anos depois de ter saído da empresa que fundou, Steve Jobs volta à companhia no início de 1997 e neste mesmo ano e momento, nascia, aqui no Brasil, Vitor Breno Chacon e Silva, com sua inabalável paixão por tecnologia e programação.",
+    "Paragraph3": "Vitor Breno Chacon e Silva sou eu! Este é o meu mundo!",
+    "Paragraph4": "Iniciei minha jornada no universo digital em 2022 quando ingressei no curso de desenvolvimento web da Trybe, onde aprendi linguagens e ferramentas de programação voltadas tanto para o desenvolvimento de páginas Web (Node.js, React.js) quanto voltadas para o desenvolvimento de APIs e bancos de dados para serem utilizados nestas páginas.",
+    "Paragraph5": "Espero poder contar com você na continuação dessa jornada!",
     "ProjectName": "Nome do Projeto",
     "Repository": "Link do Repositório"
   }

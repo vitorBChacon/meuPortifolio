@@ -25,7 +25,6 @@ class Projects extends Component {
       >
         <Top />
         <ProjectList />
-        <Bottom />
       </main>
     )
   }
