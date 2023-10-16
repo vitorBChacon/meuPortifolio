@@ -1,0 +1,70 @@
+.header {
+  width: 60%;
+}
+
+.name {
+  display: inline-block;
+  align-self: center;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  padding: 2%;
+  display: inline-block;
+  width: 40%;
+  align-self: center;
+  font-size: inherit;
+  border: 1px solid #ccc;
+  border-radius: 20%;
+  background-color: white;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+}
+
+.select:hover {
+  background-color: #f0f0f0;
+}
+
+.navContainer {
+  display: flex;
+  margin-top: 7%;
+  justify-content: space-evenly;
+}
+
+.navLink {
+  color: inherit;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navLink:hover {
+  opacity: 60%;
+}
+
+.homeIcon {
+  color: inherit;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.projects {
+  color: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+}
+
+.toggleIcon {
+  font-size: 20px;
+}
+
+.toggleIcon:hover {
+  cursor: pointer;
+  opacity: 60%;
+}
